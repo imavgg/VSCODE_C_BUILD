@@ -10,3 +10,9 @@
  * COMPILE:
    $ .\main.exe
 
+
+## PRACTICE
+* include self-written funciton.
+* multi-demsional array
+* pointer to an array
+

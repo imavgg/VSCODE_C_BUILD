@@ -3,6 +3,7 @@
 #include <stdbool.h>
 #include "print_md.c"
 
+
 // ctrl + shift + B : build a main.exe
 // ./main.exe : run
 int main(){
@@ -87,12 +88,12 @@ int main(){
     // //     } 
     // // printf("%i %i %.i %i %i \n",*(arr1),*(arr1+1),*(arr1+2),*(arr1+3),*(arr1+4));
 
-    // // better method:
+    // // Better method:
     // print_1D(arr1);
     // printf("arr1 = %i \n" , arr1);
     // printf(" *arr1 = %i \n",*(arr1));
 
-    // // append
+    // // Append
     // *(arr1+6)=6;
     // printf(" append 6 at the end of arr1 = " );
     // print_1D(arr1);
@@ -101,28 +102,31 @@ int main(){
     // print_1D(arr1);
 
     
-    // Multi Dimension array:
-    int arr2[2][5]={{100,2,3,7,50},{3,5,6,2,1}}; //double has problem!!!
-    // double *arr2 = {1000.0, 2.0, 3.4, 7.0, 50.0}; 
+    // // Multi Dimension array:
+    // int arr2[2][5]={{100,2,3,7,50},{3,5,6,2,1}}; //double has problem!!!
+    // // double *arr2 = {1000.0, 2.0, 3.4, 7.0, 50.0}; 
 
-    int size_t  = sizeof(arr2)/sizeof(int);   // 40 / 4 = 10
-    int size_r = sizeof(arr2) / sizeof(arr2[0]); //40 /20 = 2
-    int size_c = size_t / size_r; // 10/2=5
+    // int size_t  = sizeof(arr2)/sizeof(int);   // 40 / 4 = 10
+    // int size_r = sizeof(arr2) / sizeof(arr2[0]); //40 /20 = 2
+    // int size_c = size_t / size_r; // 10/2=5
 
-    printf("size of arr2 = %i,% i \n", size_r , size_c);
-    printf("int arr2[2][5] = \n" );
-    print_MD(arr2,size_r,size_c);
+    // printf("size of arr2 = %i,% i \n", size_r , size_c);
+    // printf("int arr2[2][5] = \n" );
+    // print_MD(arr2,size_r,size_c);
     
 
 
-    //// Lined list
-    // typedef struct list_entry {
-    //     int value;
-    //     struct list_entry *next;
-    // } list_entry_t;
     
 
+    int *ptr;
 
+    if (!ptr){
+        printf("A is NULL. \n");
+
+
+    }else printf("A is not NULL.\n");
+    
+    
 
 
 
