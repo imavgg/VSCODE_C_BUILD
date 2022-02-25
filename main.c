@@ -1,6 +1,7 @@
 #include <stdio.h>
 # include <stdlib.h>
 #include <stdbool.h>
+#include "print_md.c"
 
 // ctrl + shift + B : build a main.exe
 // ./main.exe : run
@@ -76,17 +77,42 @@ int main(){
 
     // ========================================
 
-    //// Array
+    // // Array:
+    // // 1D
     // int arr1[5]={100,2,3,7,50};
-    // arr1.append
-    // float arr1[2][5]={{100,2,3,7,50},{3,5,6,2,1}}; //double has problem!!!
-    // // double *arr2 = {1000.0, 2.0, 3.4, 7.0, 50.0}; 
-    // for (int i = 0; i< 2; i++)
-    // {
-    //     for (int j =0; j<6; j++){
-    //         printf("%.2f ",arr1[i][j]); 
-    //     } 
-    // }
+    // printf("int arr1[5] = " );
+    // //// poor method:
+    // // for (int j =0; j<7; j++){
+    // //         printf("%i ",arr1[j]); 
+    // //     } 
+    // // printf("%i %i %.i %i %i \n",*(arr1),*(arr1+1),*(arr1+2),*(arr1+3),*(arr1+4));
+
+    // // better method:
+    // print_1D(arr1);
+    // printf("arr1 = %i \n" , arr1);
+    // printf(" *arr1 = %i \n",*(arr1));
+
+    // // append
+    // *(arr1+6)=6;
+    // printf(" append 6 at the end of arr1 = " );
+    // print_1D(arr1);
+    // printf(" append 0 at the first of arr1 = " );
+    // *(arr1+0)=6;
+    // print_1D(arr1);
+
+    
+    // Multi Dimension array:
+    int arr2[2][5]={{100,2,3,7,50},{3,5,6,2,1}}; //double has problem!!!
+    // double *arr2 = {1000.0, 2.0, 3.4, 7.0, 50.0}; 
+
+    int size_t  = sizeof(arr2)/sizeof(int);   // 40 / 4 = 10
+    int size_r = sizeof(arr2) / sizeof(arr2[0]); //40 /20 = 2
+    int size_c = size_t / size_r; // 10/2=5
+
+    printf("size of arr2 = %i,% i \n", size_r , size_c);
+    printf("int arr2[2][5] = \n" );
+    print_MD(arr2,size_r,size_c);
+    
 
 
     //// Lined list
